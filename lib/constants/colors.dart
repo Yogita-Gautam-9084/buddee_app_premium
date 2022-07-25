@@ -10,6 +10,9 @@ class ColorsConstants{
   static const Color starDustWith = Color(0xFF9B9B9B);
   static const Color celeste = Color(0xFF5EE6FF);
   static const Color antiClick  = Color(0xFFFF7A00);
-
-
+  static const Color cadetBlue = Color(0xFFAAB2B7);
+  static const Color darkJungleGreen = Color(0xFF222222);
+  static const Color lemonGrass =Color(0xFF999999);
+  static const Color pastelBlue = Color(0xFF94BDFF);
+  static const Color blueJay = Color(0xFF284A7E);
 }

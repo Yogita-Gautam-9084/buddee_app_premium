@@ -37,7 +37,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           ),
           Text(
             StringConstants.findYourHobby,
-            style: MediumAppStyles.mediumText(fontSize: 20),
+            style: MediumAppStyles.mediumText(
+                fontSize: 20,
+                color: ColorsConstants.yourHobbyThunder,
+                fontWeight: FontWeight.w500),
           ),
           const SizedBox(
             height: 29,
