@@ -2,7 +2,7 @@ import 'package:buddee_app_premium/constants/colors.dart';
 import 'package:buddee_app_premium/constants/icons.dart';
 import 'package:buddee_app_premium/constants/strings_constants.dart';
 import 'package:buddee_app_premium/constants/styles.dart';
-import 'package:buddee_app_premium/modules/login/add_hobbies_screen.dart';
+import 'package:buddee_app_premium/modules/login/add_hobbies/add_hobbies_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpAboutScreen extends StatefulWidget {
@@ -13,16 +13,45 @@ class SignUpAboutScreen extends StatefulWidget {
 }
 
 TabController _tabController = _tabController;
+int _currentindex = 0;
 
 class _SignUpAboutScreenState extends State<SignUpAboutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _currentindex,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          onTap: (index) => setState(() => _currentindex = index),
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              label: '',
+              icon: Icon(IconsConstants.direction),
+            ),
+            BottomNavigationBarItem(
+              label: '',
+              icon: Icon(IconsConstants.like),
+            ),
+            BottomNavigationBarItem(
+              label: '',
+              icon: Icon(IconsConstants.message),
+            ),
+            BottomNavigationBarItem(
+              label: '',
+              icon: Icon(IconsConstants.profile),
+            ),
+          ],
+          selectedItemColor: ColorsConstants.antiClick,
+          unselectedItemColor: ColorsConstants.mistBlueYourAccount,
+          iconSize: 30,
+          elevation: 5),
       body: SingleChildScrollView(
         child: DefaultTabController(
           length: 2,
           child: Padding(
-            padding: const EdgeInsets.all(28.06),
+            padding:
+                const EdgeInsets.symmetric(vertical: 49.07, horizontal: 25.06),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -30,12 +59,15 @@ class _SignUpAboutScreenState extends State<SignUpAboutScreen> {
                 const SizedBox(
                   height: 36.07,
                 ),
-                Text(
-                  StringConstants.tellUs,
-                  style: MediumAppStyles.mediumText(
-                      fontSize: 28,
-                      fontWeight: FontWeight.w500,
-                      color: ColorsConstants.blueZodiacHello),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    StringConstants.tellUs,
+                    style: MediumAppStyles.mediumText(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w500,
+                        color: ColorsConstants.blueZodiacHello),
+                  ),
                 ),
                 const SizedBox(
                   height: 29,
@@ -50,15 +82,18 @@ class _SignUpAboutScreenState extends State<SignUpAboutScreen> {
                 const SizedBox(
                   height: 8,
                 ),
-                TextField(
-                  decoration: InputDecoration(
-                    hintStyle: RegularAppStyles.regularText(
-                        color: ColorsConstants.blueZodiacHello,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400),
-                    hintText: StringConstants.name,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                SizedBox(
+                  height: 48,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintStyle: RegularAppStyles.regularText(
+                          color: ColorsConstants.blueZodiacHello,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      hintText: StringConstants.name,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                   ),
                 ),
@@ -75,15 +110,18 @@ class _SignUpAboutScreenState extends State<SignUpAboutScreen> {
                 const SizedBox(
                   height: 8,
                 ),
-                TextField(
-                  decoration: InputDecoration(
-                    hintStyle: RegularAppStyles.regularText(
-                        color: ColorsConstants.blueZodiacHello,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400),
-                    hintText: StringConstants.dOB,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                SizedBox(
+                  height: 48,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintStyle: RegularAppStyles.regularText(
+                          color: ColorsConstants.blueZodiacHello,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      hintText: StringConstants.dOB,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                   ),
                 ),
@@ -157,7 +195,7 @@ class _SignUpAboutScreenState extends State<SignUpAboutScreen> {
                 const SizedBox(height: 188),
                 Container(
                   height: 58,
-                  width: 325,
+                  width: double.infinity,
                   decoration: BoxDecoration(
                     border: Border.all(color: ColorsConstants.antiClick),
                     borderRadius: BorderRadius.circular(40),
@@ -166,8 +204,7 @@ class _SignUpAboutScreenState extends State<SignUpAboutScreen> {
                     alignment: Alignment.center,
                     child: InkWell(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const AddHobbiesScreen()));
+                        Navigator.of(context).pushNamed('/AddHobbiesScreen');
                       },
                       child: Text(
                         StringConstants.nextStep,

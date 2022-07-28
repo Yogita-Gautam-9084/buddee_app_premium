@@ -39,23 +39,25 @@ class _AddHobbiesScreenState extends State<AddHobbiesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           currentIndex: _currentindex,
           onTap: (index) => setState(() => _currentindex = index),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              label: StringConstants.direction,
+              label: '',
               icon: Icon(IconsConstants.direction),
             ),
             BottomNavigationBarItem(
-              label: StringConstants.like,
+              label: '',
               icon: Icon(IconsConstants.like),
             ),
             BottomNavigationBarItem(
-              label: StringConstants.message,
+              label: '',
               icon: Icon(IconsConstants.message),
             ),
             BottomNavigationBarItem(
-              label: StringConstants.profile,
+              label: '',
               icon: Icon(IconsConstants.profile),
             ),
           ],
@@ -64,7 +66,7 @@ class _AddHobbiesScreenState extends State<AddHobbiesScreen> {
           iconSize: 30,
           elevation: 5),
       body: Padding(
-        padding: const EdgeInsets.only(top: 44.07, left: 25.06, right: 32),
+        padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 44.07),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -77,12 +79,17 @@ class _AddHobbiesScreenState extends State<AddHobbiesScreen> {
             ),
             Align(
               alignment: Alignment.center,
-              child: Text(
-                StringConstants.addHobbies,
-                style: MediumAppStyles.mediumText(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w500,
-                    color: ColorsConstants.blueZodiacHello),
+              child: InkWell(
+                onTap: (){
+                  Navigator.of(context).pushNamed('/AddHobbiesSaveScreen');
+                },
+                child: Text(
+                  StringConstants.addHobbies,
+                  style: MediumAppStyles.mediumText(
+                      fontSize: 28,
+                      fontWeight: FontWeight.w500,
+                      color: ColorsConstants.blueZodiacHello),
+                ),
               ),
             ),
             const SizedBox(
@@ -98,19 +105,22 @@ class _AddHobbiesScreenState extends State<AddHobbiesScreen> {
             const SizedBox(
               height: 8,
             ),
-            TextField(
-              decoration: InputDecoration(
-                hintStyle: RegularAppStyles.regularText(
-                    color: ColorsConstants.quillGreyProfile,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400),
-                hintText: StringConstants.searchForHobbies,
-                prefixIcon: const Icon(
-                  IconsConstants.search,
-                  color: ColorsConstants.lemonGrass,
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+            SizedBox(
+              height: 48,
+              child: TextField(
+                decoration: InputDecoration(
+                  hintStyle: RegularAppStyles.regularText(
+                      color: ColorsConstants.quillGreyProfile,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                  hintText: StringConstants.searchForHobbies,
+                  prefixIcon: const Icon(
+                    IconsConstants.search,
+                    color: ColorsConstants.lemonGrass,
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
               ),
             ),
@@ -123,8 +133,8 @@ class _AddHobbiesScreenState extends State<AddHobbiesScreen> {
                 child: GridView.count(
                   crossAxisCount: 2,
                   crossAxisSpacing: 8,
-                  mainAxisSpacing: 8,
-                  childAspectRatio: 3,
+                  mainAxisSpacing: 16,
+                  childAspectRatio: 5,
                   children: List.generate(
                     items.length,
                     (index) {
@@ -148,7 +158,7 @@ class _AddHobbiesScreenState extends State<AddHobbiesScreen> {
       children: [
         Container(
           padding: const EdgeInsets.only(left: 9),
-          height: 45,
+          height: 32,
           width: 152,
           decoration: BoxDecoration(
               border: Border.all(color: ColorsConstants.blueZodiacHello),

@@ -4,14 +4,14 @@ import 'package:buddee_app_premium/constants/strings_constants.dart';
 import 'package:buddee_app_premium/constants/styles.dart';
 import 'package:flutter/material.dart';
 
-class AddHobbyNextStepScreen extends StatefulWidget {
-  const AddHobbyNextStepScreen({Key? key}) : super(key: key);
+class AddHobbiesNextStepScreen extends StatefulWidget {
+  const AddHobbiesNextStepScreen({Key? key}) : super(key: key);
 
   @override
-  State<AddHobbyNextStepScreen> createState() => _AddHobbyNextStepScreenState();
+  State<AddHobbiesNextStepScreen> createState() => _AddHobbiesNextStepScreenState();
 }
 
-class _AddHobbyNextStepScreenState extends State<AddHobbyNextStepScreen> {
+class _AddHobbiesNextStepScreenState extends State<AddHobbiesNextStepScreen> {
   int _currentindex = 0;
   int selectedIndex = 0;
   @override
@@ -20,22 +20,24 @@ class _AddHobbyNextStepScreenState extends State<AddHobbyNextStepScreen> {
       child: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: _currentindex,
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
             onTap: (index) => setState(() => _currentindex = index),
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                label: StringConstants.direction,
+                label: '',
                 icon: Icon(IconsConstants.direction),
               ),
               BottomNavigationBarItem(
-                label: StringConstants.like,
+                label: '',
                 icon: Icon(IconsConstants.like),
               ),
               BottomNavigationBarItem(
-                label: StringConstants.message,
+                label: '',
                 icon: Icon(IconsConstants.message),
               ),
               BottomNavigationBarItem(
-                label: StringConstants.profile,
+                label: '',
                 icon: Icon(IconsConstants.profile),
               ),
             ],
@@ -44,7 +46,7 @@ class _AddHobbyNextStepScreenState extends State<AddHobbyNextStepScreen> {
             iconSize: 30,
             elevation: 5),
         body: Padding(
-          padding: const EdgeInsets.only(left: 25.06, top: 47.07, right: 25),
+          padding: const EdgeInsets.symmetric(horizontal: 25.06,vertical : 47.07),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

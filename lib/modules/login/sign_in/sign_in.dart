@@ -2,12 +2,12 @@ import 'package:buddee_app_premium/constants/colors.dart';
 import 'package:buddee_app_premium/constants/icons.dart';
 import 'package:buddee_app_premium/constants/strings_constants.dart';
 import 'package:buddee_app_premium/constants/styles.dart';
-import 'package:buddee_app_premium/modules/login/sign_up_about_screen.dart';
+import 'package:buddee_app_premium/modules/login/sign_up/sign_up_about_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
 
-import '../webview/webview_facebook.dart';
-import '../webview/webview_google.dart';
+import '../../webview/webview_facebook.dart';
+import '../../webview/webview_google.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -23,83 +23,98 @@ class _SignInScreenState extends State<SignInScreen> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.only(left: 32.06, top: 45.07, right: 32),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 32.06, vertical: 45.07),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Align(
-                  alignment: Alignment.topLeft,
-                  child: Icon(IconsConstants.arrow),
+                const Icon(
+                  IconsConstants.arrow,
+                  color: ColorsConstants.blueZodiacHello,
                 ),
                 const SizedBox(
                   height: 25.07,
                 ),
-                Text(
-                  StringConstants.helloAgain,
-                  style: MediumAppStyles.mediumText(
-                      fontSize: 40, color: ColorsConstants.blueZodiacHello),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    StringConstants.helloAgain,
+                    style: MediumAppStyles.mediumText(
+                        fontSize: 40,
+                        color: ColorsConstants.blueZodiacHello,
+                        fontWeight: FontWeight.w500),
+                  ),
                 ),
                 const SizedBox(
                   height: 8,
                 ),
-                Text(
-                  StringConstants.signInAccount,
-                  style: RegularAppStyles.regularText(
-                      color: ColorsConstants.mistBlueYourAccount, fontSize: 16),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    StringConstants.signInAccount,
+                    style: RegularAppStyles.regularText(
+                        color: ColorsConstants.mistBlueYourAccount,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400),
+                  ),
                 ),
                 const SizedBox(
                   height: 34,
                 ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(StringConstants.emailAddress,
-                      style: RegularAppStyles.regularText(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                        color: ColorsConstants.blueZodiacHello,
-                      )),
+                Text(
+                  StringConstants.emailAddress,
+                  style: RegularAppStyles.regularText(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: ColorsConstants.blueZodiacHello,
+                  ),
                 ),
                 const SizedBox(
                   height: 8,
                 ),
-                TextField(
-                  decoration: InputDecoration(
-                    hintStyle: RegularAppStyles.regularText(
-                        color: ColorsConstants.quillGreyProfile,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400),
-                    hintText: StringConstants.enterEmail,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                SizedBox(
+                  height: 48,
+                  width: 311,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintStyle: RegularAppStyles.regularText(
+                          color: ColorsConstants.quillGreyProfile,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      hintText: StringConstants.enterEmail,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                   ),
                 ),
                 const SizedBox(
                   height: 21,
                 ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    StringConstants.password,
-                    style: RegularAppStyles.regularText(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      color: ColorsConstants.blueZodiacHello,
-                    ),
+                Text(
+                  StringConstants.password,
+                  style: RegularAppStyles.regularText(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
+                    color: ColorsConstants.blueZodiacHello,
                   ),
                 ),
                 const SizedBox(
                   height: 8,
                 ),
-                TextField(
-                  decoration: InputDecoration(
-                    hintStyle: RegularAppStyles.regularText(
-                        color: ColorsConstants.quillGreyProfile,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400),
-                    hintText: StringConstants.enterPassword,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                SizedBox(
+                  height: 48,
+                  width: 311,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintStyle: RegularAppStyles.regularText(
+                          color: ColorsConstants.quillGreyProfile,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      hintText: StringConstants.enterPassword,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
                     ),
                   ),
                 ),
@@ -113,17 +128,25 @@ class _SignInScreenState extends State<SignInScreen> {
                     style: RegularAppStyles.regularText(
                       isUnderline: true,
                       fontWeight: FontWeight.w400,
+                      fontSize: 12,
                       color: ColorsConstants.mistBlueYourAccount,
                     ),
                   ),
                 ),
                 const SizedBox(
-                  height: 38,
+                  height: 24,
                 ),
                 Container(
                   width: 311,
                   height: 58,
                   decoration: BoxDecoration(
+                    boxShadow: const [
+                      BoxShadow(
+                        color: ColorsConstants.neonCarrot,
+                        blurRadius: 10,
+                        offset: Offset(0.0, 2),
+                      )
+                    ],
                     borderRadius: BorderRadius.circular(40),
                     gradient: const LinearGradient(colors: [
                       ColorsConstants.antiClick,
@@ -133,8 +156,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   child: Center(
                     child: InkWell(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const SignUpAboutScreen()));
+                        Navigator.of(context).pushNamed('/SignUpAboutScreen');
                       },
                       child: Text(StringConstants.signIn,
                           style: SemiBoldAppStyle.semiBoldText(
@@ -255,7 +277,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     Text(
                       StringConstants.dontHaveActSignUp,
                       style: RegularAppStyles.regularText(
+                          isUnderline: true,
                           fontWeight: FontWeight.w400,
+                          fontSize: 12,
                           color: ColorsConstants.celeste),
                     ),
                   ],

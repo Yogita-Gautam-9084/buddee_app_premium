@@ -15,4 +15,6 @@ class ColorsConstants{
   static const Color lemonGrass =Color(0xFF999999);
   static const Color pastelBlue = Color(0xFF94BDFF);
   static const Color blueJay = Color(0xFF284A7E);
+  static const Color neonCarrot = Color(0xFFFFA54A);
+
 }

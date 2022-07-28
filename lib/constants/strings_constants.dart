@@ -2,7 +2,7 @@ class StringConstants {
   static const String findYourHobby = ' Whatever your hobby, find your Buddee ';
   static const String createAccount = ' CREATE ACCOUNT ';
   static const String signIn = ' SIGN IN ';
-  static const String helloAgain = ' Hello Again ';
+  static const String helloAgain = ' Hello Again! ';
   static const String signInAccount = ' Sign in to your account ';
   static const String emailAddress = ' Email address ';
   static const String enterEmail = ' profile@gmail.com ';
@@ -50,9 +50,9 @@ class StringConstants {
   static const String profile = ' Profile';
   static const String lookingFor = 'Looking For....';
   static const String someInfoAboutYourHobby =
-      'Some Info About Your Hobby and What are You Looking For';
+      'Some info about your hobby and what are you looking for';
   static const String save = 'Save';
-  static const String youHave = 'You Have 1 Hobby';
+  static const String youHave = 'You have 1 hobby';
   static const String intermediateLevel =
       'Intermediate level, looking for partner to play weekdays after work.Committed but not too serious';
   static const String addNewHobby = '+ADD NEW HOBBY';
