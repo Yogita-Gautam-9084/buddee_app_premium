@@ -104,7 +104,7 @@ class _AddHobbiesNextStepScreenState extends State<AddHobbiesNextStepScreen> {
                   ),
                   const Spacer(),
                   Image.asset(
-                    'assets/write.png',
+                    'assets/edit.png',
                     width: 30,
                   ),
                   Image.asset('assets/cross.png'),
@@ -123,42 +123,51 @@ class _AddHobbiesNextStepScreenState extends State<AddHobbiesNextStepScreen> {
               const SizedBox(
                 height: 146,
               ),
-              Container(
-                height: 58,
-                width: 320,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  border: Border.all(color: ColorsConstants.blueJay),
-                ),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    StringConstants.addNewHobby,
-                    style: SemiBoldAppStyle.semiBoldText(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                        color: ColorsConstants.blueJay),
+              Center(
+                child: Container(
+                  height: 58,
+                  width: 311,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    border: Border.all(color: ColorsConstants.blueJay),
+                  ),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      StringConstants.addNewHobby,
+                      style: SemiBoldAppStyle.semiBoldText(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                          color: ColorsConstants.blueJay),
+                    ),
                   ),
                 ),
               ),
               const SizedBox(
                 height: 24,
               ),
-              Container(
-                height: 58,
-                width: 320,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  border: Border.all(color: ColorsConstants.antiClick),
-                ),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    StringConstants.nextStep,
-                    style: SemiBoldAppStyle.semiBoldText(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                        color: ColorsConstants.antiClick),
+              Center(
+                child: Container(
+                  height: 58,
+                  width: 311,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(40),
+                    border: Border.all(color: ColorsConstants.antiClick),
+                  ),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.of(context).pushNamed('/AddHobbiesSurfing');
+                      },
+                      child: Text(
+                        StringConstants.nextStep,
+                        style: SemiBoldAppStyle.semiBoldText(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                            color: ColorsConstants.antiClick),
+                      ),
+                    ),
                   ),
                 ),
               ),

@@ -19,22 +19,24 @@ class _AddHobbiesSurfingState extends State<AddHobbiesSurfing> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentindex,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           onTap: (index) => setState(() => _currentindex = index),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              label: StringConstants.direction,
+              label: '',
               icon: Icon(IconsConstants.direction),
             ),
             BottomNavigationBarItem(
-              label: StringConstants.like,
+              label: '',
               icon: Icon(IconsConstants.like),
             ),
             BottomNavigationBarItem(
-              label: StringConstants.message,
+              label: '',
               icon: Icon(IconsConstants.message),
             ),
             BottomNavigationBarItem(
-              label: StringConstants.profile,
+              label: '',
               icon: Icon(IconsConstants.profile),
             ),
           ],
@@ -44,7 +46,8 @@ class _AddHobbiesSurfingState extends State<AddHobbiesSurfing> {
           elevation: 5),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 25.06, top: 47.07, right: 25),
+          padding:
+              const EdgeInsets.symmetric(horizontal: 25.06, vertical: 47.07),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -78,19 +81,22 @@ class _AddHobbiesSurfingState extends State<AddHobbiesSurfing> {
               const SizedBox(
                 height: 8,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  hintStyle: RegularAppStyles.regularText(
-                      color: ColorsConstants.quillGreyProfile,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400),
-                  hintText: StringConstants.searchForHobbies,
-                  prefixIcon: const Icon(
-                    IconsConstants.search,
-                    color: ColorsConstants.lemonGrass,
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
+              SizedBox(
+                height: 48,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintStyle: RegularAppStyles.regularText(
+                        color: ColorsConstants.quillGreyProfile,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400),
+                    hintText: StringConstants.searchForHobbies,
+                    prefixIcon: const Icon(
+                      IconsConstants.search,
+                      color: ColorsConstants.lemonGrass,
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                 ),
               ),
@@ -166,7 +172,7 @@ class _AddHobbiesSurfingState extends State<AddHobbiesSurfing> {
                 ),
               ),
               const SizedBox(
-                height: 24,
+                height: 16,
               ),
               Row(
                 children: [
@@ -214,23 +220,37 @@ class _AddHobbiesSurfingState extends State<AddHobbiesSurfing> {
               const SizedBox(
                 height: 51,
               ),
-              Container(
-                width: 311,
-                height: 58,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(colors: [
-                    ColorsConstants.antiClick,
-                    ColorsConstants.cantaloupeButtonColor
-                  ], end: Alignment.topLeft, begin: Alignment.topRight),
-                  borderRadius: BorderRadius.circular(40),
-                ),
-                child: Center(
-                  child: Text(
-                    StringConstants.save,
-                    style: SemiBoldAppStyle.semiBoldText(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        color: ColorsConstants.whiteCreateAccount),
+              Center(
+                child: Container(
+                  width: 311,
+                  height: 58,
+                  decoration: BoxDecoration(
+                    boxShadow: const [
+                      BoxShadow(
+                        color: ColorsConstants.neonCarrot,
+                        blurRadius: 10,
+                        offset: Offset(0.0, 2),
+                      )
+                    ],
+                    gradient: const LinearGradient(colors: [
+                      ColorsConstants.antiClick,
+                      ColorsConstants.cantaloupeButtonColor
+                    ], end: Alignment.topLeft, begin: Alignment.topRight),
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  child: Center(
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/AddHobbiesNew');
+                      },
+                      child: Text(
+                        StringConstants.save,
+                        style: SemiBoldAppStyle.semiBoldText(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: ColorsConstants.whiteCreateAccount),
+                      ),
+                    ),
                   ),
                 ),
               ),

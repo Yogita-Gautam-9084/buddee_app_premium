@@ -38,6 +38,7 @@ dependencies:
   dots_indicator: ^2.1.0
   dotted_line: ^3.1.0
   webview_flutter: ^3.0.4
+  arc: ^0.0.3
 
 dev_dependencies:
   flutter_test:

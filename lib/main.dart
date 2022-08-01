@@ -1,4 +1,4 @@
-import 'package:buddee_app_premium/modules/login/add_hobbies/add_hobbies_search_screen.dart';
+import 'package:buddee_app_premium/modules/profile/profile_main/profile_main_my_profile.dart';
 import 'package:buddee_app_premium/routes/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       onGenerateRoute: RouteGenerator.generateRoute,
-      // home: AddHobbiesSearchScreen(),
+      home: ProfileMainMyProfile() ,
     );
   }
 }

@@ -10,6 +10,7 @@ class IconsConstants {
   static const like = Icons.thumb_up;
   static const profile =Icons.person;
   static const cross = Icons.dangerous;
+  static const star = Icons.star_outlined;
 
 
 }

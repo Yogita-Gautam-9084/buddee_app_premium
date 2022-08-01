@@ -59,4 +59,12 @@ class StringConstants {
   static const String surfingOverLockdown =
       'I took up surfing over lockdown, I love getting out of city. Beginner level and looking for a friend to join me ';
   static const String youHaveChosen = 'You have chosen two hobby';
+  static const String youHave3Hobby = ' You have three hobbies';
+  static const String iLove =
+      ' I love landscape/city photography. Would be great to meet someone to explore London and shoot together';
+  static const String addPhotos = 'ADD PHOTOS';
+  static const String addPhoto = 'ADD PHOTO';
+  static const String setPhoto = 'You can set this photo as the main one ';
+  static const String mainPhoto = 'Main Photo';
+  static const String delete = 'Delete';
 }

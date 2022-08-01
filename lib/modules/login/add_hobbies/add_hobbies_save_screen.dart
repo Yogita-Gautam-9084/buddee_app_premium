@@ -132,31 +132,33 @@ class _AddHobbiesSaveScreenState extends State<AddHobbiesSaveScreen> {
                   ),
                 ),
                  const SizedBox(height: 181,),
-                Container(
-                  width: 330,
-                  height: 58,
-                  decoration: BoxDecoration(
-                      boxShadow: const [
-                      BoxShadow(
-                        color: ColorsConstants.neonCarrot,
-                        blurRadius: 10,
-                        offset: Offset(0.0, 2),
+                Center(
+                  child: Container(
+                    width: 311,
+                    height: 58,
+                    decoration: BoxDecoration(
+                        boxShadow: const [
+                        BoxShadow(
+                          color: ColorsConstants.neonCarrot,
+                          blurRadius: 10,
+                          offset: Offset(0.0, 2),
+                        ),
+                        ],
+                        gradient: const LinearGradient(colors: [
+                          ColorsConstants.antiClick,
+                          ColorsConstants.cantaloupeButtonColor
+                        ], end: Alignment.topLeft, begin: Alignment.topRight),
+                        borderRadius: BorderRadius.circular(40)),
+                    child: Center(
+                      child: InkWell(onTap: (){
+                        Navigator.of(context).pushNamed('/AddHobbiesNextStepScreen');
+                      },
+                        child: Text(StringConstants.save,
+                            style: SemiBoldAppStyle.semiBoldText(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: ColorsConstants.whiteCreateAccount)),
                       ),
-                      ],
-                      gradient: const LinearGradient(colors: [
-                        ColorsConstants.antiClick,
-                        ColorsConstants.cantaloupeButtonColor
-                      ], end: Alignment.topLeft, begin: Alignment.topRight),
-                      borderRadius: BorderRadius.circular(40)),
-                  child: Center(
-                    child: InkWell(onTap: (){
-                      Navigator.of(context).pushNamed('/AddHobbiesNextStepScreen');
-                    },
-                      child: Text(StringConstants.save,
-                          style: SemiBoldAppStyle.semiBoldText(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: ColorsConstants.whiteCreateAccount)),
                     ),
                   ),
                 ),

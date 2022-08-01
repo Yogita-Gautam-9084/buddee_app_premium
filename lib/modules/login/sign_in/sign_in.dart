@@ -199,7 +199,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 const SizedBox(height: 24),
                 Container(
                   height: 58,
-                  width: 310,
+                  width: 311,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
                     border: Border.all(color: ColorsConstants.blueZodiacHello),

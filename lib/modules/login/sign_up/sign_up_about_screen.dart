@@ -193,25 +193,27 @@ class _SignUpAboutScreenState extends State<SignUpAboutScreen> {
                   ),
                 ),
                 const SizedBox(height: 188),
-                Container(
-                  height: 58,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: ColorsConstants.antiClick),
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).pushNamed('/AddHobbiesScreen');
-                      },
-                      child: Text(
-                        StringConstants.nextStep,
-                        style: SemiBoldAppStyle.semiBoldText(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: ColorsConstants.antiClick),
+                Center(
+                  child: Container(
+                    height: 58,
+                    width: 311,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: ColorsConstants.antiClick),
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).pushNamed('/AddHobbiesScreen');
+                        },
+                        child: Text(
+                          StringConstants.nextStep,
+                          style: SemiBoldAppStyle.semiBoldText(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: ColorsConstants.antiClick),
+                        ),
                       ),
                     ),
                   ),
