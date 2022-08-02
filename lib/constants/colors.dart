@@ -19,4 +19,6 @@ class ColorsConstants{
   static const Color robinEggBlue = Color(0xFF90EEFF);
   static const Color sunSet = Color(0xFFFF5858);
   static const Color greenishBlue = Color(0xFF58FFC3);
+  static const Color black = Color(0xFF000000);
+
 }

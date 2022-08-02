@@ -11,4 +11,6 @@ class AppImages {
   static const background2 = '$base/background2.png';
   static const vectr = '$base/vector.png';
   static const close = '$base/close.png';
+  static const close2 = '$base/close2.png';
+  static const forwardIcon = '$base/forwardIcon.png';
 }
