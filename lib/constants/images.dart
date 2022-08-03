@@ -13,4 +13,16 @@ class AppImages {
   static const close = '$base/close.png';
   static const close2 = '$base/close2.png';
   static const forwardIcon = '$base/forwardIcon.png';
+  static const threeLines = '$base/threelines.png';
+  static const visa = '$base/visa.png';
+  static const img = '$base/img.png';
+  static const celebration = '$base/celebrationImg.png';
+  static const ann = '$base/ann.png';
+  static const harry = '$base/harry.png';
+  static const inga = '$base/inga.png';
+  static const jack = '$base/jack.png';
+  static const jes = '$base/jes.png';
+  static const millie = '$base/millie.png';
+
+
 }

@@ -85,3 +85,40 @@ class MediumItalicAppStyle {
     );
   }
 }
+class BoldAppStyle {
+  static TextStyle boldText(
+      {double? height,
+        Color? color,
+        bool isUnderline = false,
+        double? fontSize,
+        FontWeight? fontWeight,
+        String? fontFamily}) {
+    return TextStyle(
+      fontFamily: fontFamily ?? FontFamily.bold,
+      fontSize: fontSize ?? 12,
+      fontWeight: fontWeight ?? FontWeight.w500,
+      color: color ?? ColorsConstants.blueJaySignIn,
+      height: height,
+      decoration: isUnderline ? TextDecoration.underline : TextDecoration.none,
+    );
+  }
+}
+class ExtraBoldAppStyle {
+  static TextStyle extraBoldText(
+      {double? height,
+        Color? color,
+        bool isUnderline = false,
+        double? fontSize,
+        FontWeight? fontWeight,
+        String? fontFamily}) {
+    return TextStyle(
+      fontFamily: fontFamily ?? FontFamily.bold,
+      fontSize: fontSize ?? 12,
+      fontWeight: fontWeight ?? FontWeight.w500,
+      color: color ?? ColorsConstants.blueJaySignIn,
+      height: height,
+      decoration: isUnderline ? TextDecoration.underline : TextDecoration.none,
+    );
+  }
+}
+

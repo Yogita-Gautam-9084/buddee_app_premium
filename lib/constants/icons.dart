@@ -11,6 +11,8 @@ class IconsConstants {
   static const profile =Icons.person;
   static const cross = Icons.dangerous;
   static const star = Icons.star_outlined;
-
+   static const check = Icons.check;
+   static const apple = Icons.apple;
+   static const arrowBack = Icons.arrow_forward_ios;
 
 }

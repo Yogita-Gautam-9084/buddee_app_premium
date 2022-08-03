@@ -20,5 +20,10 @@ class ColorsConstants{
   static const Color sunSet = Color(0xFFFF5858);
   static const Color greenishBlue = Color(0xFF58FFC3);
   static const Color black = Color(0xFF000000);
-
+  static const Color mercury = Color(0xFFE5E5E5);
+  static const Color sea = Color(0xFF3593A5);
+  static const Color rhino = Color(0xFF1D396B);
+  static const Color coralRed = Color(0xFFFF4040);
+  static const Color jetGrey = Color(0xFF5E668E);
+  static const Color downRiver = Color(0xFF022150);
 }

@@ -1,3 +1,6 @@
+import 'package:buddee_app_premium/modules/checkout_options/add_hobbies/choose_plan_screen.dart';
+import 'package:buddee_app_premium/modules/liked_in_premium/add_hobbies.dart';
+import 'package:buddee_app_premium/modules/checkout_options/add_hobbies/congratulation_screen.dart';
 import 'package:buddee_app_premium/modules/login/add_hobbies/add_hobbies_3hobbies.dart';
 import 'package:buddee_app_premium/modules/login/add_hobbies/add_hobbies_new.dart';
 import 'package:buddee_app_premium/modules/profile/add_hobbies/add_3hobbies_profile.dart';
@@ -9,6 +12,8 @@ import 'package:buddee_app_premium/modules/profile/profile_main/profile_main_my_
 import 'package:buddee_app_premium/routes/routes.dart';
 import 'package:flutter/material.dart';
 
+import 'modules/chat_screens/messages_screen.dart';
+import 'modules/checkout_options/add_hobbies/payment_screen.dart';
 import 'modules/profile/privacy_policy/privacy_policy_screen.dart';
 
 void main() {
@@ -31,7 +36,12 @@ class MyApp extends StatelessWidget {
       // home:  SearchHobbies(),
       // home: PhotographyHobbies(),
       // home: Add3HobbiesProfile(),
-      home: PrivacyPolicyScreen(),
+      // home: PrivacyPolicyScreen(),
+      // home:  AddHobbies(),
+      // home: ChoosePlanScreen(),
+      // home:  PaymentScreen(),
+      // home: CongratulationScreen(),
+      home: MessagesScreen(),
     );
   }
 }

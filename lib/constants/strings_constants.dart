@@ -92,4 +92,47 @@ class StringConstants {
   static const String longText = 'Effective: October 1, 2021'
       '(View previous versions: 4/19/21, 6/12/20)'
       'Our Privacy Policy explains how Buddlee collects, uses, and discloses information about you. The terms “Buddlee,” “we,” “us,” and “our” include Buddlee LLC and our affiliates. We use the terms “member,” “you,” and “your” to mean any person using our Platform or attending related events, including any organization or person using the Platform on an organization’s behalf. This Privacy Policy applies to the processing of information about members and other individuals that we collect when you use our “Platform,” which means any website, application, or services we offer, or when you communicate with us. For information about choices you may have under this policy, please see “Your Choices” below.This Privacy Policy does not apply to the information that you may provide to third parties, such as members, and others with whom you may share information about yourself. sources...';
+  static const String explore = ' Explore';
+  static const String likedYou = 'Liked You';
+  static const String all = 'All';
+  static const String ann = 'Ann,21';
+  static const String inga = 'Inga,24';
+  static const String jes = 'Jes,28';
+  static const String jeanny = 'Jeanny,20';
+  static const String getPremium = 'Get premium';
+  static const String chooseYourPlan = 'Choose Your Plan';
+  static const String premium = 'PREMIUM';
+  static const String premiumCost = '\$20';
+  static const String perMonth = 'PER MONTH';
+  static const String discount = 'Save Up to 30%';
+  static const String unlimitedLikes = 'Unlimited Likes';
+  static const String unlimitedHobbiesListed = 'Unlimited hobbies listed';
+  static const String locationChange =
+      'Change your location(veiw profiles in another way)';
+  static const String seeLikeProfiles = 'See profiles that have liked you  ';
+  static const String yourMessages = 'See if your messages have been read';
+  static const String choosePlan = 'CHOOSE PLAN';
+  static const String pay = 'Pay';
+  static const String cancel = 'Cancel';
+  static const String visa = 'VISA AVO INFINITE';
+  static const String payGuacamole = 'PAY GUACAMOLE S.R.O';
+  static const String payAmount = '\$99,99';
+  static const String confirmWith = 'Confirm With Side Button';
+  static const String congrats = 'Congratulations!';
+  static const String smallPremium = 'Premium';
+  static const String accountHolder = 'You are now a premium account holder';
+  static const String goToBuddee = 'GO TO BUDDEE';
+  static const String code = '(****1234)';
+  static const String messages = 'Messages';
+  static const String annName = 'Ann';
+  static const String jackName = 'Jack';
+  static const String millieName = 'Millie';
+  static const String harryName = 'Harry';
+  static const String played = 'Have you ever played any tournam..';
+  static const String time = '12:32AM';
+  static const String fulham = 'Im based in Fulham, yourself?';
+  static const String haha = 'Haha yep im exactly the same..';
+  static const String count2 = '2';
+  static const String count4 = '4';
+
 }
