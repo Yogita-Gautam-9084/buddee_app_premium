@@ -26,4 +26,5 @@ class ColorsConstants{
   static const Color coralRed = Color(0xFFFF4040);
   static const Color jetGrey = Color(0xFF5E668E);
   static const Color downRiver = Color(0xFF022150);
+  static const Color frostedMint = Color(0xFFE1FDFF);
 }

@@ -23,6 +23,7 @@ class AppImages {
   static const jack = '$base/jack.png';
   static const jes = '$base/jes.png';
   static const millie = '$base/millie.png';
+  static const tennisJes = '$base/tennisJes.png';
 
 
 }

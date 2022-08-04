@@ -130,9 +130,14 @@ class StringConstants {
   static const String harryName = 'Harry';
   static const String played = 'Have you ever played any tournam..';
   static const String time = '12:32AM';
+  static const String time2 ='12:24';
   static const String fulham = 'Im based in Fulham, yourself?';
   static const String haha = 'Haha yep im exactly the same..';
   static const String count2 = '2';
   static const String count4 = '4';
+  static const String descriptionTennis = 'Have you ever played any tournam..';
+  static const String descriptionFishing = 'Im based in Fulham, yourself?';
+  static const String descriptionTennisInga = 'Haha yep im exactly the same..';
+  static const String empty = '';
 
 }
