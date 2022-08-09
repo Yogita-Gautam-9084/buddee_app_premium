@@ -117,19 +117,24 @@ class _Add3HobbiesProfileState extends State<Add3HobbiesProfile> {
                   },
                 ),
                 Center(
-                  child: Container(
-                    height: 58,
-                    width: 311,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      border: Border.all(color: ColorsConstants.blueJay),
-                    ),
-                    child: Center(
-                      child: Text(
-                        StringConstants.save,
-                        style: SemiBoldAppStyle.semiBoldText(
-                          color: ColorsConstants.blueJay,
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.of(context).pushNamed('/PrivacyPolicyScreen');
+                    },
+                    child: Container(
+                      height: 58,
+                      width: 311,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(40),
+                        border: Border.all(color: ColorsConstants.blueJay),
+                      ),
+                      child: Center(
+                        child: Text(
+                          StringConstants.save,
+                          style: SemiBoldAppStyle.semiBoldText(
+                            color: ColorsConstants.blueJay,
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
                   ),

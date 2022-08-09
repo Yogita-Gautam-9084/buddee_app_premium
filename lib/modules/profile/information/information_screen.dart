@@ -202,21 +202,37 @@ class _InformationScreenState extends State<InformationScreen> {
                 ),
                 const SizedBox(height: 188),
                 Center(
-                  child: Container(
-                    height: 58,
-                    width: 311,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: ColorsConstants.antiClick),
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        StringConstants.nextStep,
-                        style: SemiBoldAppStyle.semiBoldText(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: ColorsConstants.antiClick),
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.of(context).pushNamed('/AddHobbiesProfile');
+                    },
+                    child:  Container(
+                      height: 58,
+                      width: 311,
+                      decoration: BoxDecoration(
+                        color: ColorsConstants.antiClick,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: ColorsConstants.neonCarrot,
+                            blurRadius: 10,
+                            offset: Offset(0.0, 2),
+                          ),
+                        ],
+                        gradient: const LinearGradient(colors: [
+                          ColorsConstants.antiClick,
+                          ColorsConstants.cantaloupeButtonColor
+                        ], end: Alignment.topLeft, begin: Alignment.topRight),
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          StringConstants.save,
+                          style: SemiBoldAppStyle.semiBoldText(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: ColorsConstants.whiteCreateAccount),
+                        ),
                       ),
                     ),
                   ),

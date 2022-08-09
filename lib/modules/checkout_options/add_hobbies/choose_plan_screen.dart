@@ -57,7 +57,7 @@ class _ChoosePlanScreenState extends State<ChoosePlanScreen> {
             children: [
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
                 child: Column(
                   children: [
                     const Align(
@@ -167,33 +167,38 @@ class _ChoosePlanScreenState extends State<ChoosePlanScreen> {
                           const SizedBox(
                             height: 30,
                           ),
-                          Container(
-                            height: 58,
-                            width: 311,
-                            decoration: BoxDecoration(
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: ColorsConstants.neonCarrot,
-                                  blurRadius: 10,
-                                  offset: Offset(0.0, 2),
-                                )
-                              ],
-                              gradient: const LinearGradient(
-                                  colors: [
-                                    ColorsConstants.antiClick,
-                                    ColorsConstants.cantaloupeButtonColor
-                                  ],
-                                  end: Alignment.topLeft,
-                                  begin: Alignment.topRight),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Center(
-                              child: Text(StringConstants.choosePlan,
-                                  style: SemiBoldAppStyle.semiBoldText(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 20,
-                                      color:
-                                          ColorsConstants.whiteCreateAccount)),
+                          InkWell(
+                            onTap: (){
+                              Navigator.of(context).pushNamed('/PaymentScreen');
+                            },
+                            child: Container(
+                              height: 58,
+                              width: 311,
+                              decoration: BoxDecoration(
+                                boxShadow: const [
+                                  BoxShadow(
+                                    color: ColorsConstants.neonCarrot,
+                                    blurRadius: 10,
+                                    offset: Offset(0.0, 2),
+                                  )
+                                ],
+                                gradient: const LinearGradient(
+                                    colors: [
+                                      ColorsConstants.antiClick,
+                                      ColorsConstants.cantaloupeButtonColor
+                                    ],
+                                    end: Alignment.topLeft,
+                                    begin: Alignment.topRight),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Center(
+                                child: Text(StringConstants.choosePlan,
+                                    style: SemiBoldAppStyle.semiBoldText(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 20,
+                                        color:
+                                            ColorsConstants.whiteCreateAccount)),
+                              ),
                             ),
                           ),
                         ],

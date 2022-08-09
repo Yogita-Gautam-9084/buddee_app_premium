@@ -48,22 +48,26 @@ class _AddHobbiesState extends State<AddHobbies>
           showUnselectedLabels: false,
           showSelectedLabels: false,
           onTap: (index) => setState(() => _currentindex = index),
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
+          items:  <BottomNavigationBarItem>[
+            const BottomNavigationBarItem(
               label: '',
-              icon: Icon(IconsConstants.direction),
+              icon:  Icon(IconsConstants.direction),
+            ),
+            const BottomNavigationBarItem(
+              label: '',
+              icon:  Icon(IconsConstants.like),
+            ),
+            const BottomNavigationBarItem(
+              label: '',
+              icon:  Icon(IconsConstants.message),
             ),
             BottomNavigationBarItem(
               label: '',
-              icon: Icon(IconsConstants.like),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              icon: Icon(IconsConstants.message),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              icon: Icon(IconsConstants.profile),
+              icon: InkWell(
+                  onTap: (){
+                    Navigator.of(context).pushNamed('/ChoosePlanScreen');
+                  },
+                  child: const Icon(IconsConstants.profile)),
             ),
           ],
           selectedItemColor: ColorsConstants.antiClick,
@@ -95,7 +99,7 @@ class _AddHobbiesState extends State<AddHobbies>
               const SizedBox(
                 height: 25,
               ),
-              const Text(
+              const Text( 
                 StringConstants.likedYou,
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),

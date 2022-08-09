@@ -37,22 +37,26 @@ class _AddHobbiesAddPhotoState extends State<AddHobbiesAddPhoto> {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           onTap: (index) => setState(() => _currentindex = index),
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
+          items:  <BottomNavigationBarItem>[
+           const BottomNavigationBarItem(
               label: '',
               icon: Icon(IconsConstants.direction),
             ),
-            BottomNavigationBarItem(
+           const BottomNavigationBarItem(
               label: '',
               icon: Icon(IconsConstants.like),
             ),
-            BottomNavigationBarItem(
+           const BottomNavigationBarItem(
               label: '',
               icon: Icon(IconsConstants.message),
             ),
             BottomNavigationBarItem(
               label: '',
-              icon: Icon(IconsConstants.profile),
+              icon: InkWell(
+                  onTap: (){
+                    Navigator.of(context).pushNamed('/ProfileMainMyProfile');
+                  },
+                  child: const Icon(IconsConstants.profile)),
             ),
           ],
           selectedItemColor: ColorsConstants.antiClick,

@@ -77,7 +77,9 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                       fontSize: 28,
                       color: ColorsConstants.blueZodiacHello),
                 ),
-               const SizedBox(height: 21.58,),
+                const SizedBox(
+                  height: 21.58,
+                ),
                 Container(
                   height: 116,
                   width: double.infinity,
@@ -86,8 +88,8 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                     border: Border.all(color: ColorsConstants.quillGreyProfile),
                   ),
                   child: Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -336,7 +338,49 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                       ],
                     ),
                   ),
-                )
+                ),
+              const SizedBox(
+                  height: 20,
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/');
+                  },
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.of(context).pushNamed('/AddHobbiesSearch ');
+                    },
+                    child: Container(
+                      height: 58,
+                      width: 311,
+                      decoration: BoxDecoration(
+                        color: ColorsConstants.antiClick,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: ColorsConstants.neonCarrot,
+                            blurRadius: 10,
+                            offset: Offset(0.0, 2),
+                          ),
+                        ],
+                        gradient: const LinearGradient(colors: [
+                          ColorsConstants.antiClick,
+                          ColorsConstants.cantaloupeButtonColor
+                        ], end: Alignment.topLeft, begin: Alignment.topRight),
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          StringConstants.apply,
+                          style: SemiBoldAppStyle.semiBoldText(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: ColorsConstants.whiteCreateAccount),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

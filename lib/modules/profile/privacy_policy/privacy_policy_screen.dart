@@ -31,20 +31,24 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
             showUnselectedLabels: false,
             currentIndex: _currentindex,
             onTap: (index) => setState(() => _currentindex = index),
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
+            items:  <BottomNavigationBarItem>[
+              const BottomNavigationBarItem(
                 label: '',
                 icon: Icon(IconsConstants.direction),
               ),
               BottomNavigationBarItem(
                 label: '',
-                icon: Icon(IconsConstants.like),
+                icon: InkWell(
+                    onTap: (){
+                      Navigator.of(context).pushNamed('/AddHobbies');
+                    },
+                    child: const Icon(IconsConstants.like)),
               ),
-              BottomNavigationBarItem(
+              const BottomNavigationBarItem(
                 label: '',
-                icon: Icon(IconsConstants.message),
+                icon:  Icon(IconsConstants.message),
               ),
-              BottomNavigationBarItem(
+              const BottomNavigationBarItem(
                 label: '',
                 icon: Icon(IconsConstants.profile),
               ),

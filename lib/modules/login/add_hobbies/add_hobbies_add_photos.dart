@@ -89,7 +89,7 @@ class _AddHobbiesAddPhotosState extends State<AddHobbiesAddPhotos> {
             ),
             Center(
               child: InkWell(
-                onTap: (){
+                onTap: () {
                   Navigator.of(context).pushNamed('/AddHobbiesAddPhoto');
                 },
                 child: Container(

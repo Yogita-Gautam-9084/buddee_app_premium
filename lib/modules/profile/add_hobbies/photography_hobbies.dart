@@ -16,7 +16,7 @@ class _PhotographyHobbiesState extends State<PhotographyHobbies> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar:  BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
           currentIndex: _currentindex,
           showSelectedLabels: false,
           showUnselectedLabels: false,
@@ -173,28 +173,33 @@ class _PhotographyHobbiesState extends State<PhotographyHobbies> {
                 height: 181,
               ),
               Center(
-                child: Container(
-                  width: 311,
-                  height: 58,
-                  decoration: BoxDecoration(
-                      boxShadow: const [
-                        BoxShadow(
-                          color: ColorsConstants.neonCarrot,
-                          blurRadius: 10,
-                          offset: Offset(0.0, 2),
-                        ),
-                      ],
-                      gradient: const LinearGradient(colors: [
-                        ColorsConstants.antiClick,
-                        ColorsConstants.cantaloupeButtonColor
-                      ], end: Alignment.topLeft, begin: Alignment.topRight),
-                      borderRadius: BorderRadius.circular(40)),
-                  child: Center(
-                    child: Text(StringConstants.save,
-                        style: SemiBoldAppStyle.semiBoldText(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                            color: ColorsConstants.whiteCreateAccount)),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/Add3HobbiesProfile');
+                  },
+                  child: Container(
+                    width: 311,
+                    height: 58,
+                    decoration: BoxDecoration(
+                        boxShadow: const [
+                          BoxShadow(
+                            color: ColorsConstants.neonCarrot,
+                            blurRadius: 10,
+                            offset: Offset(0.0, 2),
+                          ),
+                        ],
+                        gradient: const LinearGradient(colors: [
+                          ColorsConstants.antiClick,
+                          ColorsConstants.cantaloupeButtonColor
+                        ], end: Alignment.topLeft, begin: Alignment.topRight),
+                        borderRadius: BorderRadius.circular(40)),
+                    child: Center(
+                      child: Text(StringConstants.save,
+                          style: SemiBoldAppStyle.semiBoldText(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: ColorsConstants.whiteCreateAccount)),
+                    ),
                   ),
                 ),
               ),

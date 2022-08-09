@@ -84,6 +84,7 @@ class _ProfileMainMyProfileState extends State<ProfileMainMyProfile> {
 
   _buildListVeiw({
     required String title,
+
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -103,7 +104,12 @@ class _ProfileMainMyProfileState extends State<ProfileMainMyProfile> {
               borderRadius: BorderRadius.circular(40),
               border: Border.all(color: ColorsConstants.blueZodiacHello),
             ),
-            child: Image.asset(AppImages.forwardIcon),
+            child: InkWell(
+              onTap: (){
+                Navigator.of(context).pushNamed('/InformationScreen');
+
+              },
+                child: Image.asset(AppImages.forwardIcon)),
           ),
         ],
       ),

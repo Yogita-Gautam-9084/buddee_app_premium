@@ -121,9 +121,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                     ],
                                   ),
                                   const Spacer(),
-                                  const Icon(
-                                    IconsConstants.arrowBack,
-                                    color: ColorsConstants.antiClick,
+                                  InkWell(
+                                    onTap: (){
+                                      Navigator.of(context).pushNamed('/CongratulationScreen');
+                                    },
+                                    child: const Icon(
+                                      IconsConstants.arrowBack,
+                                      color: ColorsConstants.antiClick,
+                                    ),
                                   )
                                 ],
                               ),

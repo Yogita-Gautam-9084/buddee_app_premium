@@ -3,6 +3,7 @@ import 'package:buddee_app_premium/modules/liked_in_premium/add_hobbies.dart';
 import 'package:buddee_app_premium/modules/checkout_options/add_hobbies/congratulation_screen.dart';
 import 'package:buddee_app_premium/modules/login/add_hobbies/add_hobbies_3hobbies.dart';
 import 'package:buddee_app_premium/modules/login/add_hobbies/add_hobbies_new.dart';
+import 'package:buddee_app_premium/modules/login/on_boarding/on_boarding_screen.dart';
 import 'package:buddee_app_premium/modules/profile/add_hobbies/add_3hobbies_profile.dart';
 import 'package:buddee_app_premium/modules/profile/add_hobbies/add_hobbies_profile.dart';
 import 'package:buddee_app_premium/modules/profile/add_hobbies/photography_hobbies.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       onGenerateRoute: RouteGenerator.generateRoute,
+       home: OnBoardingScreen(),
       // home: ProfileMainMyProfile() ,
       //home: InformationScreen(),
       // home: AddHobbiesProfile(),
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
       // home: ChoosePlanScreen(),
       // home:  PaymentScreen(),
       // home: CongratulationScreen(),
-      home: MessagesScreen(),
+      // home: MessagesScreen(),
     );
   }
 }

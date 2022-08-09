@@ -179,12 +179,17 @@ class _AddHobbiesProfileState extends State<AddHobbiesProfile> {
                   ),
                   child: Align(
                     alignment: Alignment.center,
-                    child: Text(
-                      StringConstants.save,
-                      style: SemiBoldAppStyle.semiBoldText(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: ColorsConstants.whiteCreateAccount),
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.of(context).pushNamed('/SearchSettingScreen');
+                      },
+                      child: Text(
+                        StringConstants.save,
+                        style: SemiBoldAppStyle.semiBoldText(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: ColorsConstants.whiteCreateAccount),
+                      ),
                     ),
                   ),
                 ),

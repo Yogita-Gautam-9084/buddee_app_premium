@@ -228,7 +228,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
                             fontWeight: FontWeight.w500,
                             color: ColorsConstants.blueZodiacHello),
                       ),
-                      SizedBox(
+                    const   SizedBox(
                         width: 50,
                       ),
                       Text(
